@@ -18,11 +18,12 @@ export class PhoneNum {
     let str=this.num;
     let n2wObj = new N2W();
     for(i=0;i<str.length;i++){
-      if(str[i]>= '0' && str[i]<='9'){
+      if(str[i]>= '1' && str[i]<='9'){
         result+=n2wObj.numTostring(str[i])+' ';
-      }
-      else{
-        result+=str[i]+' ';
+      } else if(str[i] === '0'){
+        result+='zero ';
+      } else {
+        result+=str[i];
       }
     }
     this.arr[this.repIndex]=result;

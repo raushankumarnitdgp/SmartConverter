@@ -1,7 +1,7 @@
 import { PhoneNum } from './phone.js';
 import { isEmail } from './isEmail.js';
 import { NuminStr } from './numInstr.js';
-import { Decimal } from './decimal.js'
+import { Decimal } from './decimal.js';
 
 export function decider(arr, index) {
   const phone = new PhoneNum(arr, index);

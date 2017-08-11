@@ -14,6 +14,6 @@ class Converter {
   }
 }
 
-let numstr = new Converter('+91-83623283 234 2.34  dsds asa344s@gmail.com');
+let numstr = new Converter('+91-83623283 234.434kg 2.04  dsds asa344s@gmail.com +438-94973 cc12cc');
 numstr.convert();
 console.log(numstr.str);

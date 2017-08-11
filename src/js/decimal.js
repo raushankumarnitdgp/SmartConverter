@@ -42,7 +42,17 @@ export class Decimal {
       result+=n2wObj.numTostring(this.bstr);
       result+=' point ';
       for(let i=0;i<this.astr.length;i++){
-          result+=n2wObj.numTostring(this.astr[i])+' ';
+        if(this.astr[i] === '0') {
+            result+='zero ';
+        }
+        else {
+            if(this.astr[i]>='1' && this.astr[i]<='9'){
+                result+=n2wObj.numTostring(this.astr[i])+' ';
+            }
+            else{
+                result+=this.astr[i];
+            }
+        }
       }
       this.arr[this.repIndex]=result;
   }
