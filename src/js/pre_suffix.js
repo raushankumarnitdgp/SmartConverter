@@ -1,4 +1,5 @@
 import { N2W } from './n2w.js';
+import { convertOrdinal } from './ordinal.js'
 export class NuminStr {
   constructor(arr, rindex) {
     this.arr = arr;
@@ -25,6 +26,6 @@ export class NuminStr {
     for (i = 0; i < numArr.length; i++) {
         this.arr[this.rindex] = this.arr[this.rindex].replace(numArr[i], numStrarr[i]);
     }
-
+    convertOrdinal(this.arr,this.rindex);
   }
 }
