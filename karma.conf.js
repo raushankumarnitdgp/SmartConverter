@@ -15,9 +15,10 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/preproces.js',
-      'src/*.js',
-      'test/*.js',
+      'node_modules/babel-polyfill/dist/polyfill.js',
+      'src/js/preproces.js',
+      'src/js/*.js',
+      { pattern: 'test/*.js', watched: false },
     ],
 
 
@@ -29,13 +30,33 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/*.js': ['webpack'],
+    },
+    webpack: {
+      // karma watches the test entry points
+      // (you don't need to specify the entry option)
+      // webpack watches dependencies
+
+      // webpack configuration
     },
 
+    webpackMiddleware: {
+      // webpack-dev-middleware configuration
+      // i. e.
+      stats: 'errors-only',
+    },
+    //
+    plugins: [
+      'karma-jasmine',
+      'karma-firefox-launcher',
+      'karma-coverage',
+      'karma-babel-preprocessor',
+    ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
@@ -68,5 +89,13 @@ module.exports = function (config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
+    coverageReporter: {
+      includeAllSources: true,
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'html' },
+        { type: 'text-summary' },
+      ],
+    },
   });
 };
