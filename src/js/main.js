@@ -1,5 +1,7 @@
 import { decider } from './decider.js';
 
+document.getElementById('convert1').addEventListener('click', printNum);
+
 class Converter {
   constructor(str) {
     this.str = str;
@@ -20,8 +22,11 @@ class Converter {
   }
 }
 
-let numstr = new Converter('+91-83623283 4th 5th 3rd 85th 234.434kg 1/4 23/56 2.04  dsds asa344s@gmail.com +438-94973 cc12cc 1.1.1.1.1..1.1.1');
-numstr.convert();
-setTimeout(function(){
-  console.log(numstr.str);
-},0);
+function printNum() {
+  let text = document.getElementById('number').value;
+  let numstr = new Converter(text);
+  numstr.convert();
+  setTimeout(function (){
+    document.getElementById('toString').innerHTML = numstr.str;
+  },0);
+}
