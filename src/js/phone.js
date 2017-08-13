@@ -6,7 +6,7 @@ export class PhoneNum {
     this.num = arr[repIndex];
   }
   isPhone() {
-    const pattern = /(\+|0)([1-9]{1,7})(\-)([0-9]{3,10})/g;
+    const pattern = /((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
     let pnum = [];
     pnum = this.num.match(pattern);
     if (pnum === null) { return false; }

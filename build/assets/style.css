@@ -1,0 +1,28 @@
+
+#number{
+    width:35vw;
+    height: 20vw;
+    background-color: rgb(227, 237, 153);
+    color:rgb(55, 55, 80);
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+#convert1{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(130, 147, 33);
+    padding: 4px;
+    border: 2px solid rgb(102, 51, 153);
+    margin-top:5px;
+}
+#toString{
+    width:35vw;
+    height: 20vw;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(208, 208, 216);
+    overflow: auto;
+}
