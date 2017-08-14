@@ -1,6 +1,18 @@
 import { decider } from './decider.js';
 
+/**
+ * 
+ * 
+ * @export
+ * @class Converter
+ */
 export class Converter {
+
+	/**
+	 * Creates an instance of Converter.
+	 * @param str as 
+	 * @memberof Converter
+	 */
 	constructor(str) {
 		this.str = str;
 		this.arr = [];

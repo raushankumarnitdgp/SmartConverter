@@ -1,3 +1,11 @@
+
+/**
+ * replaces string @ arr[index] to valid ordinal string
+ * 
+ * @export
+ * @param {any} arr 
+ * @param {any} index 
+ */
 export function convertOrdinal(arr,index){
 	let find=['onest','twond','threerd','fiveth'];
 	let turnTo=['first','second','third','fifth'];

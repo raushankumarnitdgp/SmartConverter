@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1502709651402" clover="3.2.0">
-  <project timestamp="1502709651403" name="All files">
+<coverage generated="1502712094988" clover="3.2.0">
+  <project timestamp="1502712094988" name="All files">
     <metrics statements="186" coveredstatements="185" conditionals="55" coveredconditionals="54" methods="27" coveredmethods="27" elements="268" coveredelements="266" complexity="0" loc="186" ncloc="186" packages="1" files="9" classes="9">
       <file name="decider.js" path="/home/raushankumar/SmartConverter/src/js/decider.js">
         <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
@@ -94,22 +94,22 @@
       </file>
       <file name="main.js" path="/home/raushankumar/SmartConverter/src/js/main.js">
         <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
         <line num="17" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
       </file>
       <file name="n2w.js" path="/home/raushankumar/SmartConverter/src/js/n2w.js">
         <metrics statements="56" coveredstatements="55" conditionals="15" coveredconditionals="14" methods="3" coveredmethods="3"/>

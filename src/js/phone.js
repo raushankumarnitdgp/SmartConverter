@@ -28,6 +28,12 @@ export class PhoneNum {
 		const pattern = /((\+|0)([0-9]{1,7})(-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
 		return pattern.test(this.num)?true:false;
 	}
+
+	/**
+	 * 
+	 * @memberof PhoneNum
+	 * converts phonenum at arr[index] to equivalent name 
+	 */
 	convert() {
 		let result='';
 		let i;
