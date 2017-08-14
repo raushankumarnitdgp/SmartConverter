@@ -1,6 +1,10 @@
 import { PhoneNum } from '../src/js/phone.js';
 
-test('phone.js', () => {
-	let phone = new PhoneNum(['+91-9892032349'],0);
-	expect(phone.isPhone()).toBe(true);
+describe('Phone.js', function(){
+	it('converts phone number ..', function(){
+		let phone = new PhoneNum(['+91-9835049463'],0);
+		expect(phone.isPhone()).toBe(true);
+		phone.convert();
+		expect(phone.arr[phone.index]).toBe('+nine one -nine eight three five zero four nine four six three  ');
+	});
 });
