@@ -65,11 +65,23 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-class N2W {
-  constructor() {
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var N2W = exports.N2W = function () {
+  function N2W() {
+    _classCallCheck(this, N2W);
+
     this.numbers = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     this.place = ['ones', 'tens', 'hundred'];
     this.hplace = ['thousand', 'million', 'billion'];
@@ -77,417 +89,515 @@ class N2W {
     this.pTens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   }
 
-  numTostring(num) {
-    let result = '';
-    const count = num.toString().length;
+  _createClass(N2W, [{
+    key: 'numTostring',
+    value: function numTostring(num) {
+      var result = '';
+      var count = num.toString().length;
 
-    let digPos = 1;
-    let i = count - 3;
-    let hcount = 1;
-    while (i > 0) {
-      digPos *= 1000;
-      i -= 3;
-      hcount += 1;
+      var digPos = 1;
+      var i = count - 3;
+      var hcount = 1;
+      while (i > 0) {
+        digPos *= 1000;
+        i -= 3;
+        hcount += 1;
+      }
+
+      while (hcount > 0) {
+        var uDig = Math.floor(num / digPos);
+
+        result += this.numToutil1(uDig, hcount);
+        num %= digPos;
+        digPos /= 1000;
+        hcount--;
+      }
+      return result;
     }
+  }, {
+    key: 'numToutil1',
+    value: function numToutil1(num, hcount) {
+      var result = '';
+      var count = num.toString().length;
 
-    while (hcount > 0) {
-      const uDig = Math.floor(num / digPos);
+      var digPos = 1;
+      var i = count - 1;
 
-      result += this.numToutil1(uDig, hcount);
-      num %= digPos;
-      digPos /= 1000;
-      hcount--;
-    }
-    return result;
-  }
+      while (i > 0) {
+        digPos *= 10;
+        i--;
+      }
 
-  numToutil1(num, hcount) {
-    let result = '';
-    let count = num.toString().length;
-
-    let digPos = 1;
-    let i = count - 1;
-
-    while (i > 0) {
-      digPos *= 10;
-      i--;
-    }
-
-    let flagOn = false;
-    while (count > 0) {
-        const uDig = Math.floor(num / digPos);
+      var flagOn = false;
+      while (count > 0) {
+        var uDig = Math.floor(num / digPos);
 
         switch (count) {
-            case 1:
-            if (flagOn === false) { result += this.numbers[uDig]; }
-            break;
-            case 2:
-            if (uDig === 1) {
-                result += this.oTens[num - 10];
-                flagOn = true;
-            } else if (uDig >= 2) {
-                result += `${this.pTens[uDig - 2]} `;
-            } else {
-                result += '';
+          case 1:
+            if (flagOn === false) {
+              result += this.numbers[uDig];
             }
             break;
-            case 3:
-            result += `${this.numbers[uDig]} hundred `;
+          case 2:
+            if (uDig === 1) {
+              result += this.oTens[num - 10];
+              flagOn = true;
+            } else if (uDig >= 2) {
+              result += this.pTens[uDig - 2] + ' ';
+            } else {
+              result += '';
+            }
+            break;
+          case 3:
+            result += this.numbers[uDig] + ' hundred ';
             break;
         }
         num %= digPos;
         digPos /= 10;
         count--;
+      }
+      var suffix = '';
+      switch (hcount) {
+        case 1:
+          break;
+        case 2:
+          suffix = ' thousand ';
+          break;
+        case 3:
+          suffix = ' million ';
+          break;
+        case 4:
+          suffix = ' billion ';
+          break;
+        default:
+          break;
+      }
+      if (result !== '') {
+        return result + suffix;
+      }return result;
     }
-    let suffix = '';
-    switch (hcount) {
-      case 1:
-        break;
-      case 2:
-        suffix = ' thousand ';
-        break;
-      case 3:
-        suffix = ' million ';
-        break;
-      case 4:
-        suffix = ' billion ';
-        break;
-      default:
-        break;
-    }
-    if (result !== '') { return result + suffix; } return result;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = N2W;
+  }]);
 
-
+  return N2W;
+}();
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__decider_js__ = __webpack_require__(2);
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var page_content='<title>Convert Num to string ...</title><link href=assets/style.css rel=stylesheet><textarea cols=80 id=number rows=20></textarea><button id=convert1 type=button>Convert To Word</button><br><br><div id=toString></div>';
-document.body.insertAdjacentHTML('afterbegin', page_content);
+var _decider = __webpack_require__(2);
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 document.getElementById('convert1').addEventListener('click', printNum);
 
-class Converter {
-  constructor(str) {
+var Converter = function () {
+  function Converter(str) {
+    _classCallCheck(this, Converter);
+
     this.str = str;
     this.arr = [];
   }
-  convert() {
-    this.arr = this.str.split(' ');
-    var that=this;
-    for (let i = 0; i < this.arr.length; i++) {
-      setTimeout(function(){
-        Object(__WEBPACK_IMPORTED_MODULE_0__decider_js__["a" /* decider */])(that.arr, i);
-      },0);
-    }
 
-    setTimeout(function(){
-      that.str = that.arr.join(' ');
-    },0);
-  }
-}
+  _createClass(Converter, [{
+    key: 'convert',
+    value: function convert() {
+      this.arr = this.str.split(' ');
+      var that = this;
+
+      var _loop = function _loop(i) {
+        setTimeout(function () {
+          (0, _decider.decider)(that.arr, i);
+        }, 0);
+      };
+
+      for (var i = 0; i < this.arr.length; i++) {
+        _loop(i);
+      }
+
+      setTimeout(function () {
+        that.str = that.arr.join(' ');
+      }, 0);
+    }
+  }]);
+
+  return Converter;
+}();
 
 function printNum() {
-  let text = document.getElementById('number').value;
-  let numstr = new Converter(text);
+  var text = document.getElementById('number').value;
+  var numstr = new Converter(text);
   numstr.convert();
-  setTimeout(function (){
+  setTimeout(function () {
     document.getElementById('toString').innerHTML = numstr.str;
-  },0);
+  }, 0);
 }
-
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = decider;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__phone_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isEmail_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pre_suffix_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__decimal_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fraction_js__ = __webpack_require__(8);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.decider = decider;
 
+var _phone = __webpack_require__(3);
 
+var _isEmail = __webpack_require__(4);
 
+var _pre_suffix = __webpack_require__(5);
+
+var _decimal = __webpack_require__(7);
+
+var _fraction = __webpack_require__(8);
 
 function decider(arr, index) {
-    const phone = new __WEBPACK_IMPORTED_MODULE_0__phone_js__["a" /* PhoneNum */](arr, index);
-    const pre_suffix = new __WEBPACK_IMPORTED_MODULE_2__pre_suffix_js__["a" /* NuminStr */](arr, index);
-    const decimal = new __WEBPACK_IMPORTED_MODULE_3__decimal_js__["a" /* Decimal */](arr, index);
-    const fraction = new __WEBPACK_IMPORTED_MODULE_4__fraction_js__["a" /* Fraction */](arr, index);
-    if (phone.isPhone() === true) {
-      phone.convert();
-    } else if (Object(__WEBPACK_IMPORTED_MODULE_1__isEmail_js__["a" /* isEmail */])(arr[index]) === true) {
-      //do nothing ,no change
-    } else if(decimal.isDecimal() === true) {
-      decimal.convert();
-    } else if(fraction.isFraction() === true) {
-      fraction.convert();
-    } else if (pre_suffix.isNuminStr() === true) {
-      pre_suffix.convert();
-    } else {
-      //no number at this index
-    }
+  var phone = new _phone.PhoneNum(arr, index);
+  var pre_suffix = new _pre_suffix.NuminStr(arr, index);
+  var decimal = new _decimal.Decimal(arr, index);
+  var fraction = new _fraction.Fraction(arr, index);
+  if (phone.isPhone() === true) {
+    phone.convert();
+  } else if ((0, _isEmail.isEmail)(arr[index]) === true) {
+    //do nothing ,no change
+  } else if (decimal.isDecimal() === true) {
+    decimal.convert();
+  } else if (fraction.isFraction() === true) {
+    fraction.convert();
+  } else if (pre_suffix.isNuminStr() === true) {
+    pre_suffix.convert();
+  } else {
+    //no number at this index
+  }
 }
-
 
 // phone-no: \b(\+|0)[1-9]{1,6}+(\-)[0-9]{4,10}\b
 // cardinal no: without regex
 // email : \b[A-Z0-9.#&^!?:;_%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ig
 
-
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__n2w_js__ = __webpack_require__(0);
 
-class PhoneNum {
-  constructor(arr, repIndex) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PhoneNum = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _n2w = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PhoneNum = exports.PhoneNum = function () {
+  function PhoneNum(arr, repIndex) {
+    _classCallCheck(this, PhoneNum);
+
     this.arr = arr;
     this.repIndex = repIndex;
     this.num = arr[repIndex];
   }
-  isPhone() {
-    const pattern = /((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
-    let pnum = [];
-    pnum = this.num.match(pattern);
-    if (pnum === null) { return false; }
-    return true;
-  }
-  convert() {
-    let result='';
-    let i;
-    let str=this.num;
-    let n2wObj = new __WEBPACK_IMPORTED_MODULE_0__n2w_js__["a" /* N2W */]();
-    for(i=0;i<str.length;i++){
-      if(str[i]>= '1' && str[i]<='9'){
-        result+=n2wObj.numTostring(str[i])+' ';
-      } else if(str[i] === '0'){
-        result+='zero ';
-      } else {
-        result+=str[i];
+
+  _createClass(PhoneNum, [{
+    key: 'isPhone',
+    value: function isPhone() {
+      var pattern = /((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
+      var pnum = [];
+      pnum = this.num.match(pattern);
+      if (pnum === null) {
+        return false;
       }
+      return true;
     }
-    this.arr[this.repIndex]=result;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = PhoneNum;
+  }, {
+    key: 'convert',
+    value: function convert() {
+      var result = '';
+      var i = void 0;
+      var str = this.num;
+      var n2wObj = new _n2w.N2W();
+      for (i = 0; i < str.length; i++) {
+        if (str[i] >= '1' && str[i] <= '9') {
+          result += n2wObj.numTostring(str[i]) + ' ';
+        } else if (str[i] === '0') {
+          result += 'zero ';
+        } else {
+          result += str[i];
+        }
+      }
+      this.arr[this.repIndex] = result + ' ';
+    }
+  }]);
 
-
+  return PhoneNum;
+}();
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = isEmail;
-function isEmail (str) {
-  let pattern = /\b([A-Z@!_]+)([A-Z0-9@!._]*)([A-Z@!._]+)\b/gi;
-  let pmail = [];
-  pmail = str.match(pattern); 
-  if(pmail === null)
-    return false;
-  else
-    return true;
-}
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isEmail = isEmail;
+function isEmail(str) {
+  var pattern = /\b([A-Z@!_]+)([A-Z0-9@!._]*)([A-Z@!._]+)\b/gi;
+  var pmail = [];
+  pmail = str.match(pattern);
+  if (pmail === null) return false;else return true;
+}
 
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__n2w_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ordinal_js__ = __webpack_require__(6);
 
 
-class NuminStr {
-  constructor(arr, rindex) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NuminStr = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _n2w = __webpack_require__(0);
+
+var _ordinal = __webpack_require__(6);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var NuminStr = exports.NuminStr = function () {
+  function NuminStr(arr, rindex) {
+    _classCallCheck(this, NuminStr);
+
     this.arr = arr;
     this.rindex = rindex;
   }
-  isNuminStr() {
-    let numberPattern = /\d+/g;
-    let numArr = this.arr[this.rindex].match(numberPattern);
-    if (numArr === null) {
-      return false;
+
+  _createClass(NuminStr, [{
+    key: 'isNuminStr',
+    value: function isNuminStr() {
+      var numberPattern = /\d+/g;
+      var numArr = this.arr[this.rindex].match(numberPattern);
+      if (numArr === null) {
+        return false;
+      }
+      return true;
     }
-    return true;
-  }
-  convert() {
-    let numberPattern = /\d+/g;
-    let numArr = this.arr[this.rindex].match(numberPattern);
-    let numStrarr = [];
-    let i;
-    let n2wObj = new __WEBPACK_IMPORTED_MODULE_0__n2w_js__["a" /* N2W */]();
-    for ( i = 0; i < numArr.length; i++) {
+  }, {
+    key: 'convert',
+    value: function convert() {
+      var numberPattern = /\d+/g;
+      var numArr = this.arr[this.rindex].match(numberPattern);
+      var numStrarr = [];
+      var i = void 0;
+      var n2wObj = new _n2w.N2W();
+      for (i = 0; i < numArr.length; i++) {
         numStrarr[i] = n2wObj.numTostring(numArr[i]);
-    }
-    
-    for (i = 0; i < numArr.length; i++) {
+      }
+
+      for (i = 0; i < numArr.length; i++) {
         this.arr[this.rindex] = this.arr[this.rindex].replace(numArr[i], numStrarr[i]);
+      }
+      this.arr[this.rindex] += ' ';
+      (0, _ordinal.convertOrdinal)(this.arr, this.rindex);
     }
-    Object(__WEBPACK_IMPORTED_MODULE_1__ordinal_js__["a" /* convertOrdinal */])(this.arr,this.rindex);
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = NuminStr;
+  }]);
 
-
+  return NuminStr;
+}();
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = convertOrdinal;
-function convertOrdinal(arr,index){
-    let find=['onest','twond','threerd','fiveth'];
-    let turnTo=['first','second','third','fifth'];
-    for(let i=0;i<find.length;i++){
-        arr[index]=arr[index].replace(find[i],turnTo[i]);
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.convertOrdinal = convertOrdinal;
+function convertOrdinal(arr, index) {
+    var find = ['onest', 'twond', 'threerd', 'fiveth'];
+    var turnTo = ['first', 'second', 'third', 'fifth'];
+    for (var i = 0; i < find.length; i++) {
+        arr[index] = arr[index].replace(find[i], turnTo[i]);
     }
 }
 
 /***/ }),
 /* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__n2w_js__ = __webpack_require__(0);
 
 
-class Decimal {
-  constructor(arr, repIndex) {
-    this.arr=arr;
-    this.repIndex=repIndex;
-    this.str=arr[repIndex];
-    this.bstr='';
-    this.astr='';
-  }
-  isDecimal(){
-      let count=0;
-      for(let i=0;i<this.str.length;i++){
-          if(this.str[i] === '.'){
-              count++;
-          }
-      }
-      if(count === 1){
-          return true;
-      }
-      else{
-          return false;
-      }
-  }
-  parseDecimal(){
-    let i=0;
-    for(i=0;i<this.str.length;i++){
-        if(this.str[i] === '.')
-            break;
-        this.bstr+=this.str[i];
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Decimal = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _n2w = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Decimal = exports.Decimal = function () {
+    function Decimal(arr, repIndex) {
+        _classCallCheck(this, Decimal);
+
+        this.arr = arr;
+        this.repIndex = repIndex;
+        this.str = arr[repIndex];
+        this.bstr = '';
+        this.astr = '';
     }
-    i++;
-    for(;i<this.str.length;i++){
-        this.astr+=this.str[i];
-    }
-  }
 
-  convert(){
-      this.parseDecimal();
-      let result='';
-      let n2wObj=new __WEBPACK_IMPORTED_MODULE_0__n2w_js__["a" /* N2W */]();
-      result+=n2wObj.numTostring(this.bstr);
-      result+=' point ';
-      for(let i=0;i<this.astr.length;i++){
-        if(this.astr[i] === '0') {
-            result+='zero ';
-        }
-        else {
-            if(this.astr[i]>='1' && this.astr[i]<='9'){
-                result+=n2wObj.numTostring(this.astr[i])+' ';
+    _createClass(Decimal, [{
+        key: 'isDecimal',
+        value: function isDecimal() {
+            var count = 0;
+            for (var i = 0; i < this.str.length; i++) {
+                if (this.str[i] === '.') {
+                    count++;
+                }
             }
-            else{
-                result+=this.astr[i];
+            if (count === 1) {
+                return true;
+            } else {
+                return false;
             }
         }
-      }
-      this.arr[this.repIndex]=result;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Decimal;
+    }, {
+        key: 'parseDecimal',
+        value: function parseDecimal() {
+            var i = 0;
+            for (i = 0; i < this.str.length; i++) {
+                if (this.str[i] === '.') break;
+                this.bstr += this.str[i];
+            }
+            i++;
+            for (; i < this.str.length; i++) {
+                this.astr += this.str[i];
+            }
+        }
+    }, {
+        key: 'convert',
+        value: function convert() {
+            this.parseDecimal();
+            var result = '';
+            var n2wObj = new _n2w.N2W();
+            result += n2wObj.numTostring(this.bstr);
+            result += ' point ';
+            for (var i = 0; i < this.astr.length; i++) {
+                if (this.astr[i] === '0') {
+                    result += 'zero ';
+                } else {
+                    if (this.astr[i] >= '1' && this.astr[i] <= '9') {
+                        result += n2wObj.numTostring(this.astr[i]) + ' ';
+                    } else {
+                        result += this.astr[i];
+                    }
+                }
+            }
+            this.arr[this.repIndex] = result + ' ';
+        }
+    }]);
 
+    return Decimal;
+}();
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__n2w_js__ = __webpack_require__(0);
 
 
-class Fraction {
-  constructor(arr, repIndex) {
-    this.arr=arr;
-    this.repIndex=repIndex;
-    this.str=arr[repIndex];
-    this.bstr='';
-    this.astr='';
-  }
-  isFraction(){
-      let count=0;
-      for(let i=0;i<this.str.length;i++){
-          if(this.str[i] === '/'){
-              count++;
-          }
-      }
-      if(count === 1){
-          return true;
-      }
-      else{
-          return false;
-      }
-  }
-  parseFraction(){
-    let i=0;
-    for(i=0;i<this.str.length;i++){
-        if(this.str[i] === '/')
-            break;
-        this.bstr+=this.str[i];
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Fraction = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _n2w = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Fraction = exports.Fraction = function () {
+    function Fraction(arr, repIndex) {
+        _classCallCheck(this, Fraction);
+
+        this.arr = arr;
+        this.repIndex = repIndex;
+        this.str = arr[repIndex];
+        this.bstr = '';
+        this.astr = '';
     }
-    i++;
-    for(;i<this.str.length;i++){
-        this.astr+=this.str[i];
-    }
-  }
 
-  convert(){
-      this.parseFraction();
-      let result='';
-      let n2wObj=new __WEBPACK_IMPORTED_MODULE_0__n2w_js__["a" /* N2W */]();
-      result+=n2wObj.numTostring(this.bstr);
-      result+=' by ';
-      result+=n2wObj.numTostring(this.astr);
-      this.arr[this.repIndex]=result;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Fraction;
+    _createClass(Fraction, [{
+        key: 'isFraction',
+        value: function isFraction() {
+            var count = 0;
+            for (var i = 0; i < this.str.length; i++) {
+                if (this.str[i] === '/') {
+                    count++;
+                }
+            }
+            if (count === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }, {
+        key: 'parseFraction',
+        value: function parseFraction() {
+            var i = 0;
+            for (i = 0; i < this.str.length; i++) {
+                if (this.str[i] === '/') break;
+                this.bstr += this.str[i];
+            }
+            i++;
+            for (; i < this.str.length; i++) {
+                this.astr += this.str[i];
+            }
+        }
+    }, {
+        key: 'convert',
+        value: function convert() {
+            this.parseFraction();
+            var result = '';
+            var n2wObj = new _n2w.N2W();
+            result += n2wObj.numTostring(this.bstr);
+            result += ' by ';
+            result += n2wObj.numTostring(this.astr);
+            this.arr[this.repIndex] = result + ' ';
+        }
+    }]);
 
+    return Fraction;
+}();
 
 /***/ })
 /******/ ]);

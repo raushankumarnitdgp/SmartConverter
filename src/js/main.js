@@ -1,10 +1,4 @@
 import { decider } from './decider.js';
-
-
-var page_content='<title>Convert Num to string ...</title><link href=assets/style.css rel=stylesheet><textarea cols=80 id=number rows=20></textarea><button id=convert1 type=button>Convert To Word</button><br><br><div id=toString></div>';
-document.body.insertAdjacentHTML('afterbegin', page_content);
-
-
 document.getElementById('convert1').addEventListener('click', printNum);
 
 class Converter {

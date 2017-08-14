@@ -42,6 +42,6 @@ export class Fraction {
       result+=n2wObj.numTostring(this.bstr);
       result+=' by ';
       result+=n2wObj.numTostring(this.astr);
-      this.arr[this.repIndex]=result;
+      this.arr[this.repIndex]=result+' ';
   }
 }

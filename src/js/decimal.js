@@ -54,6 +54,6 @@ export class Decimal {
             }
         }
       }
-      this.arr[this.repIndex]=result;
+      this.arr[this.repIndex]=result+' ';
   }
 }

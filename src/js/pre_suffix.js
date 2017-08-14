@@ -26,6 +26,7 @@ export class NuminStr {
     for (i = 0; i < numArr.length; i++) {
         this.arr[this.rindex] = this.arr[this.rindex].replace(numArr[i], numStrarr[i]);
     }
+    this.arr[this.rindex]+=' ';
     convertOrdinal(this.arr,this.rindex);
   }
 }

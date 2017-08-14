@@ -26,6 +26,6 @@ export class PhoneNum {
         result+=str[i];
       }
     }
-    this.arr[this.repIndex]=result;
+    this.arr[this.repIndex]=result+' ';
   }
 }

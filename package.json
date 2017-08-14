@@ -1,11 +1,10 @@
 {
     "name": "SmartConverter",
     "version": "1.0.0",
-    "main": "./src/js/main.js",
+    "main": "index.js",
     "scripts": {
-        "start": "babel-node src/js/main.js",
-        "test": "karma start karma.conf.js ",
-        "build": "webpack --config ./scripts/*/webpack.config.js"
+        "test": "jest --coverage",
+        "build": "./node_modules/.bin/webpack --config ./scripts/webpack.config.js"
     },
     "repository": "https://github.com/raushankumarnitdgp/SmartConverter.git",
     "author": "raushankumarnitdgp <raushankumar.nitdgp@gmail.com>",
@@ -16,8 +15,7 @@
         "babel-jest": "^20.0.3",
         "babel-loader": "^7.1.1",
         "babel-preset-env": "^1.6.0",
-        "extract-text-webpack-plugin": "^3.0.0",
-        "html-webpack-plugin": "^2.30.1",
+        "eslint": "^4.4.1",
         "jest": "^20.0.4",
         "webpack": "^3.5.2"
     }
