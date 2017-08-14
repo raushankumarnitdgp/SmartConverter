@@ -1,6 +1,19 @@
 import { N2W } from './n2w.js';
 
+/**
+ * 
+ * 
+ * @export
+ * @class Decimal
+ */
 export class Decimal {
+
+	/**
+	 * Creates an instance of Decimal.
+	 * @param {any} arr 
+	 * @param {any} index 
+	 * @memberof Decimal
+	 */
 	constructor(arr, index) {
 		this.arr=arr;
 		this.index=index;
@@ -8,6 +21,13 @@ export class Decimal {
 		this.bstr='';
 		this.astr='';
 	}
+
+	/**
+	 * 
+	 * 
+	 * @returns (true|false) true if arr[index] else false
+	 * @memberof Decimal
+	 */
 	isDecimal(){
 		let count=0;
 		for(let i=0;i<this.str.length;i++){
@@ -22,6 +42,12 @@ export class Decimal {
 			return false;
 		}
 	}
+
+	/**
+	 * 
+	 * parse string to get number before '.' and number after
+	 * @memberof Decimal
+	 */
 	parseDecimal(){
 		let i=0;
 		for(i=0;i<this.str.length;i++){
@@ -35,6 +61,12 @@ export class Decimal {
 		}
 	}
 
+	/**
+	 * 
+	 * converts string 'a decimal' at arr[index] to its equivalent
+	 * like 2.03 as two point zero three 
+	 * @memberof Decimal
+	 */
 	convert(){
 		this.parseDecimal();
 		let result='';

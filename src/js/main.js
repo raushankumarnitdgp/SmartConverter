@@ -10,13 +10,20 @@ export class Converter {
 
 	/**
 	 * Creates an instance of Converter.
-	 * @param str as 
+	 * @param str 
 	 * @memberof Converter
 	 */
 	constructor(str) {
 		this.str = str;
 		this.arr = [];
 	}
+
+	/**
+	 * 
+	 * converts numbers present in str to equivalent str having word in place of numbers
+	 * arr have string of str split by space
+	 * @memberof Converter
+	 */
 	convert() {
 		this.arr = this.str.split(' ');
 		var that=this;
@@ -32,6 +39,11 @@ export class Converter {
 	}
 }
 
+/**
+ * takes input from element having id:number 
+ * and converted output at element #id:toString
+ * @export
+ */
 export function printNum() {
 	let text = document.getElementById('number').value;
 	let numstr = new Converter(text);
@@ -41,6 +53,10 @@ export function printNum() {
 	},0);
 }
 
+/**
+ * event listener of element #id:convert1 
+ * @export
+ */
 export function clicked(){
 	document.getElementById('convert1').addEventListener('click', printNum);
 }

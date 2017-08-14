@@ -1,4 +1,15 @@
+/**
+ * 
+ * 
+ * @export
+ * @class N2W
+ */
 export class N2W {
+
+	/**
+	 * Creates an instance of N2W.
+	 * @memberof N2W
+	 */
 	constructor() {
 		this.numbers = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 		this.place = ['ones', 'tens', 'hundred'];
@@ -7,6 +18,12 @@ export class N2W {
 		this.pTens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 	}
 
+	/**
+	 * 
+	 * @param {any} num : number (ex: 12, 12.01, 2000 etc.)
+	 * @returns result: converts num (a number) to word form of num 
+	 * @memberof N2W
+	 */
 	numTostring(num) {
 		let result = '';
 		const count = num.toString().length;
@@ -31,6 +48,14 @@ export class N2W {
 		return result;
 	}
 
+	/**
+	 * 
+	 * 
+	 * @param {any} num : gets number of max length:3 ,it gets num from numTostring in chunk of 3
+	 * @param {any} hcount : position of this chunk thousand , million ,billion
+	 * @returns 
+	 * @memberof N2W
+	 */
 	numToutil1(num, hcount) {
 		let result = '';
 		let count = num.toString().length;
