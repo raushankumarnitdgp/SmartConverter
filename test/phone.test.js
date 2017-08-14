@@ -1,7 +1,6 @@
 import { PhoneNum } from '../src/js/phone.js';
 
-global.PhoneNum=PhoneNum;
 test("phone.js", () => {
-  let phone = new PhoneNum('09892032349');
-  expect(phone.convert()).toBe(true);
+  let phone = new PhoneNum(['+91-9892032349'],0);
+  expect(phone.isPhone()).toBe(true);
 });
