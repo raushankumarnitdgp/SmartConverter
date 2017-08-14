@@ -1,10 +1,10 @@
 import { N2W } from './n2w.js';
 
 export class Fraction {
-	constructor(arr, repIndex) {
+	constructor(arr, index) {
 		this.arr=arr;
-		this.repIndex=repIndex;
-		this.str=arr[repIndex];
+		this.index=index;
+		this.str=arr[index];
 		this.bstr='';
 		this.astr='';
 	}
@@ -42,6 +42,6 @@ export class Fraction {
 		result+=n2wObj.numTostring(this.bstr);
 		result+=' by ';
 		result+=n2wObj.numTostring(this.astr);
-		this.arr[this.repIndex]=result+' ';
+		this.arr[this.index]=result+' ';
 	}
 }

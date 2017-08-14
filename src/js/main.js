@@ -1,7 +1,6 @@
 import { decider } from './decider.js';
-document.getElementById('convert1').addEventListener('click', printNum);
 
-class Converter {
+export class Converter {
 	constructor(str) {
 		this.str = str;
 		this.arr = [];
@@ -21,7 +20,7 @@ class Converter {
 	}
 }
 
-function printNum() {
+export function printNum() {
 	let text = document.getElementById('number').value;
 	let numstr = new Converter(text);
 	numstr.convert();
@@ -29,3 +28,9 @@ function printNum() {
 		document.getElementById('toString').innerHTML = numstr.str;
 	},0);
 }
+
+export function clicked(){
+	document.getElementById('convert1').addEventListener('click', printNum);
+}
+
+window.onload = clicked;

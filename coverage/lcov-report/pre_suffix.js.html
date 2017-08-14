@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for phone.js</title>
+    <title>Code coverage report for pre_suffix.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> phone.js
+      <a href="index.html">All files</a> pre_suffix.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>15/15</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/15</span>
+        <span class='fraction'>17/17</span>
       </div>
     </div>
   </div>
@@ -75,113 +75,68 @@
 30
 31
 32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">25x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { N2W } from './n2w.js';
-/**
- * 
- * 
- * @export
- * @class PhoneNum
- */
-export class PhoneNum {
-	/**
-	 * Creates an instance of PhoneNum.
-	 * @param {any} arr 
-	 * @param {any} index 
-	 * @memberof PhoneNum
-	 */
+import { convertOrdinal } from './ordinal.js';
+export class NuminStr {
 	constructor(arr, index) {
 		this.arr = arr;
 		this.index = index;
-		this.num = arr[index];
 	}
-&nbsp;
-	/**
-	 * 
-	 * 
-	 * @returns {true|false} if pattern matches then returns true else returns false 
-	 * @memberof PhoneNum
-	 */
-	isPhone() {
-		const pattern = /((\+|0)([0-9]{1,7})(-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
-		return pattern.test(this.num)?true:false;
+	isNuminStr() {
+		let numberPattern = /\d+/g;
+		let numArr = this.arr[this.index].match(numberPattern);
+		if (numArr === null) {
+			return false;
+		}
+		return true;
 	}
 	convert() {
-		let result='';
+		let numberPattern = /\d+/g;
+		let numArr = this.arr[this.index].match(numberPattern);
+		let numStrarr = [];
 		let i;
-		let str=this.num;
 		let n2wObj = new N2W();
-		for(i=0;i&lt;str.length;i++){
-			if(str[i]&gt;= '1' &amp;&amp; str[i]&lt;='9'){
-				result+=n2wObj.numTostring(str[i])+' ';
-			} else if(str[i] === '0'){
-				result+='zero ';
-			} else {
-				result+=str[i];
-			}
+		for ( i = 0; i &lt; numArr.length; i++) {
+			numStrarr[i] = n2wObj.numTostring(numArr[i]);
 		}
-		this.arr[this.index]=result+' ';
+    
+		for (i = 0; i &lt; numArr.length; i++) {
+			this.arr[this.index] = this.arr[this.index].replace(numArr[i], numStrarr[i]);
+		}
+		this.arr[this.index]+=' ';
+		convertOrdinal(this.arr,this.index);
 	}
 }
 &nbsp;</pre></td></tr>

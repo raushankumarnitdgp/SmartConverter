@@ -1,10 +1,10 @@
 import { N2W } from './n2w.js';
 
 export class Decimal {
-	constructor(arr, repIndex) {
+	constructor(arr, index) {
 		this.arr=arr;
-		this.repIndex=repIndex;
-		this.str=arr[repIndex];
+		this.index=index;
+		this.str=arr[index];
 		this.bstr='';
 		this.astr='';
 	}
@@ -54,6 +54,6 @@ export class Decimal {
 				}
 			}
 		}
-		this.arr[this.repIndex]=result+' ';
+		this.arr[this.index]=result+' ';
 	}
 }

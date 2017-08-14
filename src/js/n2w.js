@@ -82,8 +82,6 @@ export class N2W {
 		case 4:
 			suffix = ' billion ';
 			break;
-		default:
-			break;
 		}
 		if (result !== '') { return result + suffix; } return result;
 	}

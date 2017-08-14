@@ -5,6 +5,6 @@ describe('Phone.js', function(){
 		let phone = new PhoneNum(['+91-9835049463'],0);
 		expect(phone.isPhone()).toBe(true);
 		phone.convert();
-		expect(phone.arr[phone.index]).toBe('+nine one -nine eight three five zero four nine four six three  ');
+		expect(phone.arr[0]).toBe('+nine one -nine eight three five zero four nine four six three  ');
 	});
 });

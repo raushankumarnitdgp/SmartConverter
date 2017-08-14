@@ -1,100 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1502699707166" clover="3.2.0">
-  <project timestamp="1502699707166" name="All files">
-    <metrics statements="82" coveredstatements="61" conditionals="26" coveredconditionals="13" methods="8" coveredmethods="8" elements="116" coveredelements="82" complexity="0" loc="82" ncloc="82" packages="1" files="4" classes="4">
+<coverage generated="1502709651402" clover="3.2.0">
+  <project timestamp="1502709651403" name="All files">
+    <metrics statements="186" coveredstatements="185" conditionals="55" coveredconditionals="54" methods="27" coveredmethods="27" elements="268" coveredelements="266" complexity="0" loc="186" ncloc="186" packages="1" files="9" classes="9">
+      <file name="decider.js" path="/home/raushankumar/SmartConverter/src/js/decider.js">
+        <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="3" type="stmt"/>
+      </file>
+      <file name="decimal.js" path="/home/raushankumar/SmartConverter/src/js/decimal.js">
+        <metrics statements="32" coveredstatements="32" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="40" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="18" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="49" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+      </file>
+      <file name="fraction.js" path="/home/raushankumar/SmartConverter/src/js/fraction.js">
+        <metrics statements="27" coveredstatements="27" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="29" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="18" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+      </file>
       <file name="isEmail.js" path="/home/raushankumar/SmartConverter/src/js/isEmail.js">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+      <file name="main.js" path="/home/raushankumar/SmartConverter/src/js/main.js">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
       <file name="n2w.js" path="/home/raushankumar/SmartConverter/src/js/n2w.js">
-        <metrics statements="57" coveredstatements="36" conditionals="16" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="11" count="11" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="14" count="11" type="stmt"/>
-        <line num="15" count="11" type="stmt"/>
-        <line num="16" count="11" type="stmt"/>
-        <line num="17" count="11" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="11" type="stmt"/>
-        <line num="24" count="11" type="stmt"/>
-        <line num="26" count="11" type="stmt"/>
-        <line num="27" count="11" type="stmt"/>
-        <line num="28" count="11" type="stmt"/>
-        <line num="29" count="11" type="stmt"/>
-        <line num="31" count="11" type="stmt"/>
-        <line num="35" count="11" type="stmt"/>
-        <line num="36" count="11" type="stmt"/>
-        <line num="38" count="11" type="stmt"/>
-        <line num="39" count="11" type="stmt"/>
-        <line num="41" count="11" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="46" count="11" type="stmt"/>
-        <line num="47" count="11" type="stmt"/>
-        <line num="48" count="11" type="stmt"/>
-        <line num="50" count="11" type="cond" truecount="1" falsecount="2"/>
-        <line num="52" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="53" count="11" type="stmt"/>
-        <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="59" count="0" type="stmt"/>
+        <metrics statements="56" coveredstatements="55" conditionals="15" coveredconditionals="14" methods="3" coveredmethods="3"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="11" count="40" type="stmt"/>
+        <line num="12" count="40" type="stmt"/>
+        <line num="14" count="40" type="stmt"/>
+        <line num="15" count="40" type="stmt"/>
+        <line num="16" count="40" type="stmt"/>
+        <line num="17" count="40" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="23" count="40" type="stmt"/>
+        <line num="24" count="46" type="stmt"/>
+        <line num="26" count="46" type="stmt"/>
+        <line num="27" count="46" type="stmt"/>
+        <line num="28" count="46" type="stmt"/>
+        <line num="29" count="46" type="stmt"/>
+        <line num="31" count="40" type="stmt"/>
+        <line num="35" count="46" type="stmt"/>
+        <line num="36" count="46" type="stmt"/>
+        <line num="38" count="46" type="stmt"/>
+        <line num="39" count="46" type="stmt"/>
+        <line num="41" count="46" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="9" type="stmt"/>
+        <line num="46" count="46" type="stmt"/>
+        <line num="47" count="46" type="stmt"/>
+        <line num="48" count="55" type="stmt"/>
+        <line num="50" count="55" type="cond" truecount="3" falsecount="0"/>
+        <line num="52" count="46" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="46" type="stmt"/>
+        <line num="55" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="58" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="4" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="68" count="11" type="stmt"/>
-        <line num="69" count="11" type="stmt"/>
-        <line num="70" count="11" type="stmt"/>
-        <line num="72" count="11" type="stmt"/>
-        <line num="73" count="11" type="cond" truecount="1" falsecount="4"/>
-        <line num="75" count="11" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="88" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="63" count="7" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="55" type="stmt"/>
+        <line num="69" count="55" type="stmt"/>
+        <line num="70" count="55" type="stmt"/>
+        <line num="72" count="46" type="stmt"/>
+        <line num="73" count="46" type="cond" truecount="4" falsecount="0"/>
+        <line num="75" count="40" type="stmt"/>
+        <line num="77" count="3" type="stmt"/>
+        <line num="78" count="3" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="86" count="46" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="ordinal.js" path="/home/raushankumar/SmartConverter/src/js/ordinal.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="20" type="stmt"/>
       </file>
       <file name="phone.js" path="/home/raushankumar/SmartConverter/src/js/phone.js">
-        <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="14" type="cond" truecount="4" falsecount="0"/>
-        <line num="38" count="11" type="stmt"/>
-        <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="1" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="28" count="12" type="stmt"/>
+        <line num="29" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="25" type="cond" truecount="4" falsecount="0"/>
+        <line num="38" count="20" type="stmt"/>
+        <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="3" type="stmt"/>
         <line num="42" count="2" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+      </file>
+      <file name="pre_suffix.js" path="/home/raushankumar/SmartConverter/src/js/pre_suffix.js">
+        <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
       </file>
     </metrics>
   </project>

@@ -1,13 +1,13 @@
 import { N2W } from './n2w.js';
 import { convertOrdinal } from './ordinal.js';
 export class NuminStr {
-	constructor(arr, rindex) {
+	constructor(arr, index) {
 		this.arr = arr;
-		this.rindex = rindex;
+		this.index = index;
 	}
 	isNuminStr() {
 		let numberPattern = /\d+/g;
-		let numArr = this.arr[this.rindex].match(numberPattern);
+		let numArr = this.arr[this.index].match(numberPattern);
 		if (numArr === null) {
 			return false;
 		}
@@ -15,7 +15,7 @@ export class NuminStr {
 	}
 	convert() {
 		let numberPattern = /\d+/g;
-		let numArr = this.arr[this.rindex].match(numberPattern);
+		let numArr = this.arr[this.index].match(numberPattern);
 		let numStrarr = [];
 		let i;
 		let n2wObj = new N2W();
@@ -24,9 +24,9 @@ export class NuminStr {
 		}
     
 		for (i = 0; i < numArr.length; i++) {
-			this.arr[this.rindex] = this.arr[this.rindex].replace(numArr[i], numStrarr[i]);
+			this.arr[this.index] = this.arr[this.index].replace(numArr[i], numStrarr[i]);
 		}
-		this.arr[this.rindex]+=' ';
-		convertOrdinal(this.arr,this.rindex);
+		this.arr[this.index]+=' ';
+		convertOrdinal(this.arr,this.index);
 	}
 }
