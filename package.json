@@ -4,7 +4,8 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --coverage",
-        "build": "./node_modules/.bin/webpack --config ./scripts/webpack.config.js"
+        "build": "./node_modules/.bin/webpack --config ./scripts/*/webpack.config.js",
+        "lint": "./node_modules/.bin/eslint src/js/*.js"
     },
     "repository": "https://github.com/raushankumarnitdgp/SmartConverter.git",
     "author": "raushankumarnitdgp <raushankumar.nitdgp@gmail.com>",
@@ -16,6 +17,7 @@
         "babel-loader": "^7.1.1",
         "babel-preset-env": "^1.6.0",
         "eslint": "^4.4.1",
+        "html-webpack-plugin": "^2.30.1",
         "jest": "^20.0.4",
         "webpack": "^3.5.2"
     }

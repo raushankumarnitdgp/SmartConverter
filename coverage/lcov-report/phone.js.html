@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">36.84% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/19</span>
+        <span class='fraction'>5/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">12.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>1/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">66.67% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">38.89% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/18</span>
+        <span class='fraction'>5/15</span>
       </div>
     </div>
   </div>
@@ -71,29 +71,23 @@
 26
 27
 28
-29
-30
-31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+29</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -107,24 +101,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { N2W } from './n2w.js';
 export class PhoneNum {
-  constructor(arr, repIndex) {
+  constructor(arr, index) {
     this.arr = arr;
-    this.repIndex = repIndex;
-    this.num = arr[repIndex];
+    this.index = index;
+    this.num = arr[index];
   }
-<span class="fstat-no" title="function not covered" >  is</span>Phone() {
-    const pattern = <span class="cstat-no" title="statement not covered" >/((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;</span>
-    let pnum = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >    pnum = this.num.match(pattern);</span>
-<span class="cstat-no" title="statement not covered" >    if (pnum === null) { <span class="cstat-no" title="statement not covered" >return false; </span>}</span>
-<span class="cstat-no" title="statement not covered" >    return true;</span>
+  isPhone() {
+    const pattern = /((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
+    return pattern.test(this.num)?true:<span class="branch-1 cbranch-no" title="branch not covered" >false;</span>
   }
-  convert() {
-    let result='';
+<span class="fstat-no" title="function not covered" >  co</span>nvert() {
+    let result=<span class="cstat-no" title="statement not covered" >'';</span>
     let i;
-    let str=this.num;
-    let n2wObj = new N2W();
-    for(i=0;i&lt;str.length;i++){
+    let str=<span class="cstat-no" title="statement not covered" >this.num;</span>
+    let n2wObj = <span class="cstat-no" title="statement not covered" >new N2W();</span>
+<span class="cstat-no" title="statement not covered" >    for(i=0;i&lt;str.length;i++){</span>
 <span class="cstat-no" title="statement not covered" >      if(str[i]&gt;= '1' &amp;&amp; str[i]&lt;='9'){</span>
 <span class="cstat-no" title="statement not covered" >        result+=n2wObj.numTostring(str[i])+' ';</span>
       } else <span class="cstat-no" title="statement not covered" >if(str[i] === '0'){</span>
@@ -133,7 +124,7 @@ export class PhoneNum {
 <span class="cstat-no" title="statement not covered" >        result+=str[i];</span>
       }
     }
-<span class="cstat-no" title="statement not covered" >    this.arr[this.repIndex]=result+' ';</span>
+<span class="cstat-no" title="statement not covered" >    this.arr[this.index]=result+' ';</span>
   }
 }
 &nbsp;</pre></td></tr>
@@ -142,7 +133,7 @@ export class PhoneNum {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Aug 14 2017 08:41:00 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Aug 14 2017 11:18:15 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>

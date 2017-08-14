@@ -303,24 +303,19 @@ var _n2w = __webpack_require__(0);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var PhoneNum = exports.PhoneNum = function () {
-  function PhoneNum(arr, repIndex) {
+  function PhoneNum(arr, index) {
     _classCallCheck(this, PhoneNum);
 
     this.arr = arr;
-    this.repIndex = repIndex;
-    this.num = arr[repIndex];
+    this.index = index;
+    this.num = arr[index];
   }
 
   _createClass(PhoneNum, [{
     key: 'isPhone',
     value: function isPhone() {
       var pattern = /((\+|0)([0-9]{1,7})(\-)([0-9]{3,10}))|(\b(0)([0-9]{10})\b)/g;
-      var pnum = [];
-      pnum = this.num.match(pattern);
-      if (pnum === null) {
-        return false;
-      }
-      return true;
+      return pattern.test(this.num) ? true : false;
     }
   }, {
     key: 'convert',
@@ -338,7 +333,7 @@ var PhoneNum = exports.PhoneNum = function () {
           result += str[i];
         }
       }
-      this.arr[this.repIndex] = result + ' ';
+      this.arr[this.index] = result + ' ';
     }
   }]);
 
