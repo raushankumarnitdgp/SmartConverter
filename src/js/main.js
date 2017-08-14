@@ -10,7 +10,7 @@ export class Converter {
 
 	/**
 	 * Creates an instance of Converter.
-	 * @param str 
+	 * @param str : a text 
 	 * @memberof Converter
 	 */
 	constructor(str) {
@@ -21,7 +21,7 @@ export class Converter {
 	/**
 	 * 
 	 * converts numbers present in str to equivalent str having word in place of numbers
-	 * arr have string of str split by space
+	 * arr have string of str split by space and this arr is passed to decider function
 	 * @memberof Converter
 	 */
 	convert() {
@@ -40,7 +40,8 @@ export class Converter {
 }
 
 /**
- * takes input from element having id:number 
+ * takes input from element having id:number : and this is input to Converter  
+ * calls converter() of class Converter 
  * and converted output at element #id:toString
  * @export
  */
