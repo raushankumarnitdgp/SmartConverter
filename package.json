@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "jest --coverage",
         "build": "./node_modules/.bin/webpack --config ./scripts/*/webpack.config.js",
+        "doc":"./node_modules/.bin/jsdoc src/js/*.js -d docs/",
         "lint": "./node_modules/.bin/eslint src/js/*.js",
-        "doc":"./node_modules/.bin/jsdoc src/js/*.js -d docs/"
+        "test": "jest --coverage"
     },
     "repository": "https://github.com/raushankumarnitdgp/SmartConverter.git",
     "author": "raushankumarnitdgp <raushankumar.nitdgp@gmail.com>",
